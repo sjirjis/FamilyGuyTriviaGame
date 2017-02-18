@@ -1,0 +1,32 @@
+body {
+	background-color: #c6e7ff;
+}
+
+.imgContainer {
+	position: relative;
+}
+
+.titleImg{
+	height: 25%;
+	width: 25%;
+	margin: auto;
+	display: block;
+}
+
+.leftImg {
+	position: absolute;
+	left:0;
+	top:0;
+}
+
+.rightImg {
+	position: absolute;
+	right:0;
+	top:0;
+}
+
+#start, #results, #quiz, .titleText {
+	margin: auto;
+	display: block;
+	text-align: center;
+}
