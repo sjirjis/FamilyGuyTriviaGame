@@ -1,28 +1,38 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-	<title>Trivia Game</title>
+	<meta charset="utf-8">
+	<title>Family Guy Trivia</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="assets/javascript/app.js" async></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://bootswatch.com/cerulean/bootstrap.min.css">
+	<!-- custom stylesheet -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/javascript/app.js" async></script>	
 </head>
+
 <body>
-	<div class='main'>
-		<div class='imgContainer'>
-			<img class=leftImg src="assets/images/left.png" />
-			<img class=titleImg src="assets/images/1200px-Family_Guy_Logo.svg.png" />
-			<img class=rightImg src="assets/images/right.png" />
+	<div class='container'>
+		<div class='row header'>
+			<div id='imgDiv'>
+				<img id=leftImg src="./assets/images/left.png" />
+				<img id=rightImg src="./assets/images/right.png" />
+				<img id=titleImg src="./assets/images/1200px-Family_Guy_Logo.svg.png" />
+			</div>
+
+			<h1 class="titleText text-center">Trivia Game</h1>
+			<br />
+			<button type='button' id="start" class="btn btn-default btn-lg">START</button>
 		</div>
-		<br />
-		<h1 class="titleText">Trivia Game!</h1>
-		<br />		
-		<button id="start" class="btn">Start</button>
-		<div id='quiz'>
-			<div id='timer'></div>
-			<div class="questions"></div>
-		</div>
-		<div id="results">
-		</div>
+
+		<div class='row'>
+			<div id="timer"></div>
+		</div>test
 	</div>
 </body>
+
 </html>

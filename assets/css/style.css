@@ -1,32 +1,40 @@
-body {
-	background-color: #c6e7ff;
+.header {
+	padding-top: 25px;
 }
 
-.imgContainer {
+#imgDiv {
 	position: relative;
 }
 
-.titleImg{
-	height: 25%;
-	width: 25%;
+#titleImg{
 	margin: auto;
 	display: block;
+	max-height: 50%;
+	max-width: 50%;
 }
 
-.leftImg {
+#leftImg {
 	position: absolute;
-	left:0;
-	top:0;
+	left: 0;
+	top: 0;
+	max-height: 120%;
+	max-width: 120%;
 }
 
-.rightImg {
+#rightImg {
 	position: absolute;
-	right:0;
-	top:0;
+	right: 0;
+	top: 0;
+	max-height: 120%;
+	max-width: 120%;
 }
 
-#start, #results, #quiz, .titleText {
+#start, #results, #quiz {
 	margin: auto;
 	display: block;
 	text-align: center;
+}
+
+body {
+	background-color: #c6e7ff;
 }
