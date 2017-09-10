@@ -1,11 +1,6 @@
-$('#test').on('click', function(){
-  console.log('test executed');
-});
-
 $('#start').on('click', function() {
-  console.log('button clicked!');
-    //var t = new timer("timer", 10);
-    //t.start();
+    var t = new timer("timer", 10);
+    t.start();
     timer("timer", 30).start();
     qRender();
     $('#start').hide();

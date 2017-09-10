@@ -7,8 +7,11 @@
 
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
-	<script src='assets/javascript/js.js' async></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src='assets/javascript/timer.js' async></script>
+	<script src='assets/javascript/questions.js' async></script>
 
+	<link rel='stylesheet' href='assets/css/jquery-ui.css'>
 	<link rel='stylesheet' href='https://bootswatch.com/cerulean/bootstrap.min.css'>
 	<!-- custom stylesheet -->
 	<link rel='stylesheet' type='text/css' href='assets/css/style.css'>
@@ -33,7 +36,31 @@
 				<p id='timerText' class='text-center'></p>
 			</div>
 		</div>
+
+		<div class='row'>
+			<div id='questionContainer' class='text-center'>
+				<h3 id='questionText'></h3>
+					<div id='answerOptions'>
+						<fieldset>
+							<label for="radio-1" id='radioLabel-1'></label>
+							<input type="radio" name="radio-1" id="radio-1">
+							<label for="radio-2" id='radioLabel-2'></label>
+							<input type="radio" name="radio-1" id="radio-2">
+							<label for="radio-3" id='radioLabel-3'></label>
+							<input type="radio" name="radio-1" id="radio-3">
+							<label for="radio-4" id='radioLabel-4'></label>
+							<input type="radio" name="radio-1" id="radio-4">
+						</fieldset>
+					</div>
+					<button id='next' class='btn btn-success'>NEXT QUESTION</button>
+					<button id='done' class='btn btn-success'>LAST QUESTION!</button>
+			</div>
+			<div id='results'>
+				quiz results here!
+			</div>
+		</div>
 	</div>
+
 </body>
 
 </html>

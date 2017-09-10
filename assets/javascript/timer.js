@@ -3,6 +3,7 @@ $('#timer').hide();
 $('#start').on('click', function() {
   $('#start').hide();
   $('#timer').show();
+  $('#questionContainer').show();
 
   var quizDuration = 3
   $('#timerText').html(quizDuration);
