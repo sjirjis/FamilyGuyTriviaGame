@@ -1,3 +1,7 @@
+body {
+	background-color: #c6e7ff;
+}
+
 .header {
 	padding-top: 25px;
 }
@@ -35,6 +39,14 @@
 	text-align: center;
 }
 
-body {
-	background-color: #c6e7ff;
+#timer {
+  margin: 20px;
+  height: 200px;
+  position: relative;
+}
+
+#timerText {
+  font-size:36px;
+  border-top: 1px solid #C0392B;
+  border-bottom: 1px solid #C0392B;
 }
