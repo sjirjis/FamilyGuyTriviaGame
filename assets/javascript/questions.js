@@ -70,9 +70,10 @@ $(document).ready(function() {
       radioIdSelected = $('input[name=radio-answer]:checked').attr('id').split("-").pop();
     }
     catch(err) {
-      $("#myModal").modal();
+      $("#myModal").modal();//throw modal if no answer was selected
       return;
     }
+    //bump score if correct answer selected
     if (radioIdSelected == questions[currentQuestion].answer) {
       score++;
     }
@@ -83,13 +84,13 @@ $(document).ready(function() {
   $("input").checkboxradio();
 
   $('#start').on('click', function() {
-    displayQandA();
+    displayQandA(); //display starting question
   });
 
   $('#next').on('click', function() {
     validateAndProcessAnswer(); //validate answer...
     displayQandA(); //..if passed, throw the next question
-    if(currentQuestion == totalQuestions) {
+    if(currentQuestion == totalQuestions) { //check if we're on the last question
       $('#next').hide();
       $('#submit').show();
     }
