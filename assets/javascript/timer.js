@@ -24,6 +24,10 @@ $('#start').on('click', function() {
         'color': '#fff'
       });
       $('#timerText').html("Time's Up!");
+      $('#questionContainer, #submit').hide();
+      $('#results').html('<h3>You got ' + score + ' questions correct out of ' + questions.length + '!').show();
+      //@todo have to get score to actually dispay. currently based on validateAndProcessAnswer() in questions.js
+
     }
   }, 1000);
 });

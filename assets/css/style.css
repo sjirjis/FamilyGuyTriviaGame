@@ -44,7 +44,7 @@ body {
   position: relative;
 }
 
-#timerText {
+#timeUp, #quizDone {
   font-size:36px;
   border-top: 1px solid #C0392B;
   border-bottom: 1px solid #C0392B;
