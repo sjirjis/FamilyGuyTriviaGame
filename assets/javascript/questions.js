@@ -1,10 +1,4 @@
 $(document).ready(function() {
-  $(function() {
-    $("input").checkboxradio();
-  });
-
-  $('#questionContainer, #results, #done').hide();
-
   var questions = [{
     'q': "How many kids are in Peter and Lois's family?",
     'a': ['One', 'Two', 'Three', 'Four'],
@@ -30,7 +24,7 @@ $(document).ready(function() {
     'a': ['Clam', 'Eagle', 'Horse', 'Lion'],
     'answerIndex': 0
   }, {
-    'q': "What is the name of the fish that Peter, Joe, Quagmire and Cleveland go hunting for?",
+    'q': "What is the name of the fish that Peter and the guys hunt for?",
     'a': ['Snapperjaw', 'Spinetooth', 'Daggermouth', 'Bloodtooth'],
     'answerIndex': 2
   }, {
@@ -56,15 +50,38 @@ $(document).ready(function() {
 
   var displayQandA = function() {
     $('#questionText').html(questions[currentQuestionIndex].q);
-    $('#radioLabel-1').html(questions[currentQuestionIndex].a[0]);
-    $('#radioLabel-2').html(questions[currentQuestionIndex].a[1]);
-    $('#radioLabel-3').html(questions[currentQuestionIndex].a[2]);
-    $('#radioLabel-4').html(questions[currentQuestionIndex].a[3]);
+    $('#radioLabel-0').html(questions[currentQuestionIndex].a[0]);
+    $('#radioLabel-1').html(questions[currentQuestionIndex].a[1]);
+    $('#radioLabel-2').html(questions[currentQuestionIndex].a[2]);
+    $('#radioLabel-3').html(questions[currentQuestionIndex].a[3]);
   };
 
-  $('#next, #start').on('click', function() {
+  $('#questionContainer, #results, #done').hide();
+  $("input").checkboxradio();
+
+  $('#start').on('click', function() {
     displayQandA();
+  });
+
+  $('#next').on('click', function() {
+    try {
+      //grab the #id of selected radio, split into arrayat the "-", and pop() to return the last elemtent in array
+      //looking for 0, 1, 2, or 3 to evaluate against the correct answer index
+      var radioIdSelected = $('input[type=radio][name=radio-answer]:checked').attr('id').split("-").pop();
+    }
+    catch(err) {
+      $("#myModal").modal();
+      return;
+    }
+
+    console.log(radioIdSelected);
     currentQuestionIndex++;
+    $('input[name=radio-answer]').prop('checked',false);
+    $('label').removeClass('ui-checkboxradio-checked ui-state-active');
+    displayQandA();
+    $('input').removeClass('ui-checkboxradio-checked ui-state-active');
+    //$('input[name=radio-answer]').prop('checked',false);
+
     if(currentQuestionIndex == totalQuestionIndex) {
       $('#next').hide();
       $('#done, #results').show();
