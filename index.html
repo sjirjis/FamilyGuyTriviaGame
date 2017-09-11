@@ -21,6 +21,7 @@
 
 <body>
 	<div class='container'>
+<!-- page header -->
 		<div class='row header'>
 			<div id='imgDiv'>
 				<img id=leftImg src='./assets/images/left.png' />
@@ -32,46 +33,49 @@
 			<br />
 			<button type='button' id='start' class='btn btn-default btn-lg'>START</button>
 		</div>
-
+<!-- end header -->
+<!-- timer -->
 		<div class='row'>
 			<div id='timer'>
 				<p id='timerText' class='text-center'></p>
 			</div>
 		</div>
-
+<!-- end timer -->
 		<div class='row'>
+<!-- questions -->
 			<div id='questionContainer' class='text-center'>
 				<h3 id='questionText'></h3>
 				<div id='answerOptions'>
 					<fieldset>
-						<label for="radio-0" id='radioLabel-0'></label>
-						<input type="radio" name="radio-answer" id="radio-0">
 						<label for="radio-1" id='radioLabel-1'></label>
 						<input type="radio" name="radio-answer" id="radio-1">
 						<label for="radio-2" id='radioLabel-2'></label>
 						<input type="radio" name="radio-answer" id="radio-2">
 						<label for="radio-3" id='radioLabel-3'></label>
 						<input type="radio" name="radio-answer" id="radio-3">
+						<label for="radio-4" id='radioLabel-4'></label>
+						<input type="radio" name="radio-answer" id="radio-4">
 					</fieldset>
 				</div>
 				<button id='next' class='btn btn-success'>NEXT QUESTION</button>
-				<button id='done' class='btn btn-success'>SUBMIT</button>
-				<!-- Modal -->
-				<div class="modal fade" id="myModal" role="dialog">
-					<div class="modal-dialog">
-						<!-- Modal content-->
-						<div class="modal-content">
-							<div class="modal-header">You must choose and answer!</div>
-						</div>
-					</div>
+				<button id='submit' class='btn btn-success'>SUBMIT</button>
+			</div>
+<!-- end questions -->
+<!-- results -->
+			<div id='results'></div>
+<!-- end results			 -->
+		</div>
+<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2>You must choose an answer!</h2></div>
 				</div>
 			</div>
-			<div id='results'>
-				quiz results here!
-			</div>
 		</div>
+<!-- end Modal -->
 	</div>
-
 </body>
-
 </html>
