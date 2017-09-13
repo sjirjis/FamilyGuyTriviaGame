@@ -19,8 +19,6 @@ After the quiz, we'll show you your score.
 
 
 Future developments:
-
 Configure a replay button
-
 Store quiz results in local/session storage
 
